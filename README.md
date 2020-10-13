@@ -1,2 +1,2 @@
 # sprint2
-Documento de Unity para el Sprint 2.
+Documento para compartir el proyecto de Unity para el Sprint 2.
