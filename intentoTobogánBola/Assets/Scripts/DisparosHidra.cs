@@ -6,7 +6,7 @@ public class DisparosHidra : MonoBehaviour
     public Transform target;
     public float range = 12f;
 
-    public float fireRate = 2f;
+    public float fireRate = 1f;
     private float fireCountdown = 0f;
 
     public GameObject bulletPrefab;

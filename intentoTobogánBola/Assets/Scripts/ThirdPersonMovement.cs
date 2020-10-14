@@ -16,7 +16,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 movimiento = new Vector3(horizontal, 0f, 0f) * velocidad * Time.deltaTime;
+        Vector3 movimiento = new Vector3(horizontal, 0f, vertical) * velocidad * Time.deltaTime;
         transform.Translate(movimiento, Space.Self);
     }
 

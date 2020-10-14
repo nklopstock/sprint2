@@ -18,7 +18,7 @@ public class Veneno : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
@@ -33,6 +33,6 @@ public class Veneno : MonoBehaviour
 
     void HitTarget()
     {
-        Destroy(gameObject);
+        Debug.Log("HIT!!");
     }
 }
