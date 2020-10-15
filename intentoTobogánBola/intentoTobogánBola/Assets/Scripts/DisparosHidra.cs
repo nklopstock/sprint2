@@ -17,28 +17,6 @@ public class DisparosHidra : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
     
-    void UpdateTarget()
-    {   
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Player");
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-
-        foreach(GameObject enemy in enemies)
-        {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
-        }
-
-        if(nearestEnemy != null && shortestDistance <= range)
-        {
-            target = nearestEnemy.transform;
-        }
-    }
-
     void Update()
     {
         if (target = null)
@@ -57,13 +35,7 @@ public class DisparosHidra : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Veneno bullet = bulletGO.GetComponent<Veneno>();
-
-        if(bullet != null)
-        {
-            bullet.Seek(target);
-        }
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
     void OnDrawGizmosSelected()
