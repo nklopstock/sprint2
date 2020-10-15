@@ -4,22 +4,34 @@ public class Veneno : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
-    public float lifeDuration = 2f;
-    private float lifeTimer;
-
-    void Start()
+    public void Seek(Transform _target)
     {
-        lifeTimer = lifeDuration;
+        target = _target;
     }
 
     // Update is called once per frame
     void Update()
     {
-        lifeTimer -= Time.deltaTime;
-
-        if(lifeTimer <= 0f)
+        if(target == null)
         {
             Destroy(gameObject);
+            return;
         }
+
+        Vector3 dir = target.position - transform.position;
+        float distanceThisFrame = speed * Time.deltaTime;
+
+        if(dir.magnitude <= distanceThisFrame)
+        {
+            HitTarget();
+            return;
+        }
+
+        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+    }
+
+    void HitTarget()
+    {
+        Destroy(gameObject);
     }
 }
