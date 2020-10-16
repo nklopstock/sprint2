@@ -57,13 +57,7 @@ public class DisparosHidra : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Veneno bullet = bulletGO.GetComponent<Veneno>();
-
-        if(bullet != null)
-        {
-            bullet.Seek(target);
-        }
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
     void OnDrawGizmosSelected()

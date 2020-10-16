@@ -5,16 +5,18 @@ using UnityEngine;
 public class VidaHidraControlador : MonoBehaviour
 {
     private int conteoVida;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         conteoVida = 20;
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider otro)
     {
-        if(col.gameObject.name == "Hidra")
+        if(otro.gameObject.name == "Hidra")
         {
             Debug.Log("Collision Detected");
             Destroy(gameObject);
@@ -22,7 +24,7 @@ public class VidaHidraControlador : MonoBehaviour
             
             if(conteoVida <= 0)
             {
-                Destroy(col.gameObject);
+                Destroy(otro.gameObject);
             }
         }
     }
