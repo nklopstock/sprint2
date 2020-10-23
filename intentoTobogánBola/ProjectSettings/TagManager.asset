@@ -8,6 +8,12 @@ TagManager:
   - Proyectil
   - Piso
   - Bala
+  - Jugador
+  - Arco
+  - Comida
+  - Flecha
+  - Ave
+  - ProyectilAve
   layers:
   - Default
   - TransparentFX
