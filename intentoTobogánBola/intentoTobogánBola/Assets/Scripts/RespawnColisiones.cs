@@ -10,6 +10,11 @@ public class RespawnColisiones : MonoBehaviour
         {
             Restart();
         }
+        if(other.CompareTag("Proyectil"))
+        {
+            Destroy(other.gameObject);
+        }
+        
     }
     void Restart()
     {
