@@ -9,11 +9,17 @@ TagManager:
   - Piso
   - Bala
   - Jugador
+  - Cambiox2
+  - TriggerAnima01
+  - Pared
   - Arco
   - Comida
   - Flecha
   - Ave
   - ProyectilAve
+  - ProyectilPlayerPajaro
+  - Arma
+  - PlayerAver
   layers:
   - Default
   - TransparentFX

@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 129455a80b5844a458f6ccb22030fc4d
+  - enabled: 1
+    path: Assets/Scenes/LVLHidra.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/LVLPajaro.unity
+    guid: f4b6dba353c13f0448d414745f595ce6
   m_configObjects: {}

@@ -5,53 +5,62 @@ using UnityEngine.UI;
 
 public class Personaje : MonoBehaviour
 {
-    public float velMovimiento  =5.0f;
+    public float velMovimiento  = 5.0f;
     public float velRotacion = 200.0f;
-    public Animator anim;
-    public float DagnoPlayer=5;
+    private Animator anim;
+    public float DagnoPlayer=10;
     public float x, y;
     public Rigidbody rb;
-    public float jumpHeight=8f;
+    public float jumpHeight=5f;
     public bool isGrounded;
-    private float inicioDisparo;
-    public float tiempoDisparo;
-    public float VelDisparo;
     public Transform lanzador;
-    public GameObject flechaPrefab;
-    public int Arco=0;
+    public GameObject ProyectilPrefab;
+    public int Arma=0;
     public int Comida=0;
-    public Text textoArco;
+    public Text textoArma;
     public Text textoComida;
-    public float angulo;
+    public Text TxtEstado;
+    public bool attacking = false;
+    public AveScript ave;
+    private float dagnoAve;
+    public LogicaVida logicaVidaPlayer;
+    public Camera Cinematica;
+    public bool Estado;
+    public PauseMenu menu;
     void Start() {
+        Estado=false;
+        Cinematica.enabled = false;
+        menu = GameObject.Find("Canvas").GetComponent<PauseMenu>();
+        ave = GameObject.Find("Ave").GetComponent<AveScript>();
+        anim = GetComponent<Animator>();
         isGrounded=false;
-        textoArco.text= "Armas: "+Arco.ToString();
+        textoArma.text= "Armas: "+Arma.ToString();
         textoComida.text= "Comida: "+Comida.ToString();
     }
     void FixedUpdate() {
-            transform.Rotate(0,x*Time.deltaTime*velRotacion,0);
-            transform.Translate(0,0,y*Time.deltaTime*velMovimiento);
-            angulo = transform.eulerAngles.y;
+            if (!attacking){
+                transform.Rotate(0,x*Time.deltaTime*velRotacion,0);
+                transform.Translate(0,0,y*Time.deltaTime*velMovimiento);
+            }
 
     }
     void Update()
-    {    
+    {
+        dagnoAve = ave.getDagno();
         x= Input.GetAxis("Horizontal");
         y= Input.GetAxis("Vertical");
 
-        if(Input.GetMouseButtonDown(0) && isGrounded)
+        if(Input.GetMouseButtonDown(0) && isGrounded && !attacking)
         {
             anim.SetTrigger("Golpe");
-            GameObject proyectilObjeto = Instantiate(flechaPrefab);
-            proyectilObjeto.transform.position = lanzador.position + lanzador.forward;
-            proyectilObjeto.transform.forward = lanzador.forward;
+            attacking = true;
         }
         anim.SetFloat("VelX",x);
         anim.SetFloat("VelY",y);
 
 
 
-        if (isGrounded){
+        if (isGrounded && !attacking){
                 if(Input.GetKeyDown(KeyCode.Space)){
                     anim.SetBool("Jump",true);
                     rb.AddForce(new Vector3(0,jumpHeight,0),ForceMode.Impulse);
@@ -66,10 +75,10 @@ public class Personaje : MonoBehaviour
         anim.SetBool("Grounding",false);
     }
     void OnTriggerEnter(Collider otro){
-        if(otro.gameObject.CompareTag("Arco")){
+        if(otro.gameObject.CompareTag("Arma")){
             otro.gameObject.SetActive(false);
-            Arco++;
-            DagnoPlayer=10;
+            Arma++;
+            DagnoPlayer=25;
             cambiarTexto();
         }
         if(otro.gameObject.CompareTag("Comida")){
@@ -78,13 +87,47 @@ public class Personaje : MonoBehaviour
             cambiarTexto();
         }
     }
+    public float getDagno (){
+        return DagnoPlayer;
+    }
+    public void setComida (int num){
+        Comida=num;
+    }
     void cambiarTexto(){
-            if(Comida>0){
+            if(Comida>=0){
                 textoComida.text= "Comida: "+(Comida).ToString();
             }
-            if(Arco>0){
-                textoArco.text= "Armas: "+(Arco).ToString();
+            if(Arma>=0){
+                textoArma.text= "Armas: "+(Arma).ToString();
             }
 
+    }
+    public void DejeAtaque(){
+        attacking=false;
+    }
+    public void Atacando(){
+        GameObject proyectilObjeto = Instantiate(ProyectilPrefab, lanzador.position, Quaternion.identity) as GameObject;
+        proyectilObjeto.transform.position = lanzador.position + lanzador.transform.forward;
+        proyectilObjeto.transform.forward = lanzador.transform.forward;
+    }
+    public void Colision(){
+        logicaVidaPlayer.vidaActual-=dagnoAve;
+        bool muerte = logicaVidaPlayer.MuertePersonaje(Comida);
+        cambiarTexto();
+        if(muerte){
+            Muerte();
+        }
+    }
+    public void Muerte(){
+        TxtEstado.text= "Haz Muerto";
+        Estado = true;
+        menu.PanelEstado(Estado);
+        Cinematica.enabled = true;
+        gameObject.SetActive(false);
+    }
+    public void Victoria(){
+        TxtEstado.text= "Victoria";
+        Estado = true;
+        menu.PanelEstado(Estado);
     }
 }
