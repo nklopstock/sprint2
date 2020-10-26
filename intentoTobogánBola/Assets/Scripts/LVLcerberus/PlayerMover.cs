@@ -11,6 +11,17 @@ public class PlayerMover : MonoBehaviour
 
     public float x,y;
 
+    public Rigidbody rb;
+    
+    public float jumper = 1;
+
+    public Transform groundCheck;
+    public float  groundDistance = 0.1f;
+
+    public LayerMask grounddMask;
+
+    bool isGround;
+
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +32,23 @@ public class PlayerMover : MonoBehaviour
         transform.Translate(0, 0, y * Time.deltaTime * runSpeed); 
         animator.SetFloat("VelX", x);
         animator.SetFloat("VelY", y);  
+
+        isGround = Physics.CheckSphere(groundCheck.position, groundDistance, grounddMask);
+
+        if (Input.GetKey("space")&& isGround)
+        {
+            Invoke("Jump", 0.5f);
+            animator.Play("Jumping Up");
+
+            
+        }
+    }
+    public void Jump()
+    {
+        rb.AddForce(Vector3.up * jumper, ForceMode.Impulse);
     }
 
+
 }
+
+

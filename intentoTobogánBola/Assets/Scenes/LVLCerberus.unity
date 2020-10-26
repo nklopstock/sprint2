@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1 &48909372
@@ -406,6 +411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 733323498}
+  - {fileID: 1796509102}
   m_Father: {fileID: 565246087}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 21.308, y: -89.483, z: -5.703}
@@ -532,6 +538,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &232368928
@@ -606,6 +617,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &255172168
@@ -674,6 +690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -748,6 +769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -1283,6 +1309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1 &462762027
@@ -1449,6 +1480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -1709,6 +1745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -2013,6 +2054,13 @@ MonoBehaviour:
   animator: {fileID: 565246086}
   x: 0
   y: 0
+  rb: {fileID: 565246085}
+  jumper: 2
+  groundCheck: {fileID: 1296396482}
+  groundDistance: 0.1
+  grounddMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!136 &565246084
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2122,6 +2170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &627801850
@@ -2190,6 +2243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -2389,6 +2447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -2649,6 +2712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -2988,6 +3056,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &919530620
@@ -3056,6 +3129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -3218,6 +3296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -3385,6 +3468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -4050,7 +4138,7 @@ GameObject:
   - component: {fileID: 1281302938}
   - component: {fileID: 1281302937}
   - component: {fileID: 1281302936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MapaInfierno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4208,6 +4296,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281466143}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1296396481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296396482}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296396482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296396481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 565246087}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1308019677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4218,7 +4336,7 @@ PrefabInstance:
     - target: {fileID: 2406205136928550390, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.32
+      value: -10.13
       objectReference: {fileID: 0}
     - target: {fileID: 2406205136928550390, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
         type: 3}
@@ -4228,7 +4346,7 @@ PrefabInstance:
     - target: {fileID: 2406205136928550390, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.6
+      value: -16.68
       objectReference: {fileID: 0}
     - target: {fileID: 2406205136928550390, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
         type: 3}
@@ -4274,6 +4392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -4442,6 +4565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &1438065219
@@ -4510,6 +4638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -4747,6 +4880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1 &1679849801
@@ -4909,10 +5047,55 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.7256482
       objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.9911216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.2463758
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.02919895
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.5445177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.24120018
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Direction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
         type: 3}
       propertyPath: m_Name
       value: Cylinder (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -5009,6 +5192,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768875805}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1796509101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796509102}
+  - component: {fileID: 1796509104}
+  - component: {fileID: 1796509103}
+  m_Layer: 0
+  m_Name: Camera (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796509102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796509101}
+  m_LocalRotation: {x: 0.6318609, y: -0.027215682, z: 0.033333022, w: 0.7738863}
+  m_LocalPosition: {x: -0.08, y: 16.37, z: 0.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 132142842}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 78.462006, y: 0, z: 4.933}
+--- !u!81 &1796509103
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796509101}
+  m_Enabled: 1
+--- !u!20 &1796509104
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796509101}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1001 &1844348215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5075,6 +5341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -5424,6 +5695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &2137375159
@@ -5498,6 +5774,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
 --- !u!1001 &2139053121
@@ -5566,6 +5847,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
@@ -5729,6 +6015,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8657216822605829295, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
         type: 3}
       propertyPath: m_Name
@@ -5738,6 +6029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Cilindros
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062348899110599999, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6ee74fef20c4d4bb0bf9a31d43ca93, type: 3}
