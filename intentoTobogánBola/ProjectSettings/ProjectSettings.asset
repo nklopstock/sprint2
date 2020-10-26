@@ -645,7 +645,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 0
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -659,10 +659,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 8b7360db-8bc3-4080-a586-94f5d3ee9238
+  cloudProjectId: 8d614b29-353e-4ed4-bd65-5c6d67799ba0
   framebufferDepthMemorylessMode: 0
   projectName: "intentoTobog\xE1nBola"
-  organizationId: pintorodriguezcarlos509
+  organizationId: nklopstock
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
