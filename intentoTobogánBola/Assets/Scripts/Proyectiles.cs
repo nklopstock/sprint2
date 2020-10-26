@@ -12,4 +12,12 @@ public class Proyectiles : MonoBehaviour
         //Hacer que el proyectíl se mueva.
         transform.position += transform.forward * velocidad * Time.deltaTime;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Pared"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
