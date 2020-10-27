@@ -9,6 +9,7 @@ TagManager:
   - Piso
   - Bala
   - Cilindros
+  - objetivos
   layers:
   - Default
   - TransparentFX
